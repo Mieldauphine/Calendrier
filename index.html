@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calendrier Interactif 2025</h1>
+    </header>
+    <main>
+        <div id="calendar-controls">
+            <button id="prev-month">Mois précédent</button>
+            <span id="current-month">Janvier 2025</span>
+            <button id="next-month">Mois suivant</button>
+        </div>
+        <div id="calendar"></div>
+        <div id="event-controls">
+            <label for="day-type">Type de jour :</label>
+            <select id="day-type">
+                <option value="residence">Travail à Résidence</option>
+                <option value="deplacement">Déplacement</option>
+                <option value="conge">Congés</option>
+            </select>
+            <div id="deplacement-details" style="display: none;">
+                <label for="deplacement-type">Type de déplacement :</label>
+                <input type="text" id="deplacement-type" placeholder="Ex: Formation, Mission">
+                <label for="deplacement-lieu">Lieu :</label>
+                <input type="text" id="deplacement-lieu" placeholder="Ex: Paris">
+            </div>
+        </div>
+        <div id="summary">
+            <h3>Récapitulatif</h3>
+            <p>Jours travaillés (Résidence) : <span id="count-residence">0</span></p>
+            <p>Jours travaillés (Déplacement) : <span id="count-deplacement">0</span></p>
+            <p>Jours de congés : <span id="count-conge">0</span></p>
+            <p>Samedis en déplacement : <span id="count-samedi-deplacement">0</span></p>
+        </div>
+        <button id="reset-calendar">Réinitialiser le calendrier</button>
+    </main>
+    <footer>
+        <p>© 2025 - Mon Application de Calendrier</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
